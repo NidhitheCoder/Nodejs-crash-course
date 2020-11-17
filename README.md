@@ -22,3 +22,8 @@
 - Packages get stored in the "node modules" folder.
 - All dependencies  are listed in a "package.json" file.
 - NPM scripts can be created to run certian tasks such as run server.
+
+- To install node : npm install node.
+- To install nodemon : npm install -D nodemon.
+- "npm init" create package.json.
+- To run a node js file: "node <filename.js>".
