@@ -27,3 +27,13 @@
 - To install nodemon : npm install -D nodemon.
 - "npm init" create package.json.
 - To run a node js file: "node <filename.js>".
+
+### path module
+- Path module provides utilities for working with file and directory paths. it can be accessed using:-
+
+    ```
+    const path = require('path');
+    
+    ```
+
+    || Referance : https://nodejs.org/dist/latest-v15.x/docs/api/path.html
