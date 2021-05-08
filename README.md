@@ -72,12 +72,20 @@
     
     ```
 
-## Events
+### Events
 - Every action in computer is an event.
 - Objects in node js can fire events, like readStream object fires events when opening and clossing a file.
 - nodejs has a buid in module, called events , where you can create ,fire, and listen for your own events.
-
+- To use this module:
     ```
     const events = require('events');
     
     ```
+### http module
+- The http module allows nodejs to transfer data over the Hyper Text Transfer Protocol(HTTP).
+- To use this module:
+
+    ```
+    const http = require('http');
+    ```
+- http module can create an http server that listens to server ports and gives a response back to the client.
