@@ -1,6 +1,8 @@
 # Nodejs
+#  with the help of Traversy media youtube crash course : https://www.youtube.com/watch?v=fBNz5xF-Kx4
 
 - Nodejs is a javascript runtime(not a language or a framework).
+- Nodejs run as a service inside a mechine.
 - Build on the V8 Javascript engine (same a google chrome). It is written in c++
 - Essentially allows us to run Javascript code on the server.
 
@@ -9,6 +11,7 @@
 - It is event driven and non blocking I/O model.
 - Node is more popular in the industry.
 - Same language on the front-end and back-end(JS).
+- It is better to use anything that not CPU intensive.
 
 ## What is non-blocking I/O
 - Works on a single thread using non-blocking I/O calls.
@@ -27,6 +30,11 @@
 - To install nodemon : npm install -D nodemon.
 - "npm init" create package.json.
 - To run a node js file: "node <filename.js>".
+    - npm init : generate a package.json gile
+    - npm install express : install a package locally.
+    - npm install -g nodemon : install a package globally. 
+    - use node keyword to terminal helps you to run js in machine.
+- package.json helps to store all the dependencies.
 
 ### path module
 - Path module provides utilities for working with file and directory paths. it can be accessed using:-
@@ -37,3 +45,32 @@
     ```
 
     || Referance : https://nodejs.org/dist/latest-v15.x/docs/api/path.html
+
+### File System module(fs)
+ - The fs module enables interacting with file system in a way modeled n standerd POSIX funcitons.
+- To use this module:
+
+    ```
+    const fs = require('fs');
+    
+    ```
+### OS module
+- This module return or gives us to information about environment or operating system.
+- To use this module:
+
+    ```
+    const os = require('os');
+    
+    ```
+
+### url module
+- This module works with url's.
+- To use this module:
+
+    ```
+    const url = require('url');
+    
+    ```
+
+## Events
+- 
