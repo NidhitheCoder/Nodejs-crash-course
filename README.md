@@ -73,4 +73,11 @@
     ```
 
 ## Events
-- 
+- Every action in computer is an event.
+- Objects in node js can fire events, like readStream object fires events when opening and clossing a file.
+- nodejs has a buid in module, called events , where you can create ,fire, and listen for your own events.
+
+    ```
+    const events = require('events');
+    
+    ```
