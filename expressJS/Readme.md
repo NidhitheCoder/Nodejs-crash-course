@@ -4,6 +4,7 @@
 - Express is a fast, unopenionated and minimalist web framework for nodejs.
 - Express is a serverside or backend framework. It is not comparable with clientside frameworks like React, Angular and Vue. It can be used in combination with those frameworks to build fullstack applications.
 - Understanding of javascript basics is very helpful for quick learning of express nodejs.
+- We can send response as different types of items like, json, string,variables, files, html templates, template engines etc..
 
 ## Why we use express ?
 - Makes build web applications with node js is much easier.
@@ -37,3 +38,8 @@
   - Make changes to the reqest/response object.
   - End response cycle.
   - Call next middleware in the stack.
+
+## Nodemon
+- nodemon help us to avoid resetting server everytime.
+
+- 
