@@ -11,11 +11,23 @@ const app = express();
 //   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 // });
 
-// Init middleware
-app.use(logger);
+// // Init middleware
+// app.use(logger);
 
 // Gets all members
 app.get('/api/members', (req, res)=> res.json(members) );
+
+// Get single member
+app.get('/api/members/:id', (req, res) => {
+  // res.send(req.params.id);
+  const found = members.some(member => member.id === parseInt(req.params.id));
+
+  if(found) {
+    res.json(members.filter(member => member.id === parseInt(req.params.id)));
+  } else {
+    res.status(400).json({msg: `No member with id ${req.params.id}`}); 
+  }
+});
 
 // Set a static folder
 app.use(express.static(path.join(__dirname,'public')));
