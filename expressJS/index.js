@@ -1,5 +1,8 @@
+//  To run : npm run dev
 const express = require('express');
 const path = require('path');
+const members = require('./Members');
+const logger = require('./middleware/logger');
 
 const app = express();
 
@@ -8,6 +11,11 @@ const app = express();
 //   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 // });
 
+// Init middleware
+app.use(logger);
+
+// Gets all members
+app.get('/api/members', (req, res)=> res.json(members) );
 
 // Set a static folder
 app.use(express.static(path.join(__dirname,'public')));

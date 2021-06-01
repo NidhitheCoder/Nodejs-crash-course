@@ -42,4 +42,5 @@
 ## Nodemon
 - nodemon help us to avoid resetting server everytime.
 
-- 
+## Middlewares
+- Middleware functions are just functions that have access to the request and response. You can change things and add things in middleware.
