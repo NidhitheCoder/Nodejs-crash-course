@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background: #0b0b0b;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .form-container {
+      background: #0f0f0f;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      border: 1px solid khaki;
+      padding: 40px;
+    }
+    label{
+      color: khaki;
+      text-align: left;
+      width: 100%;
+      padding-top: 20px;
+      font-size: 18px;
+    }
+
+    input{
+      margin-top: 5px;
+      border: none;
+      border-radius: 8px;
+      height: 25px;
+      padding-left: 8px;
+    }
+    input:disabled{
+      background: gray;
+      color: white;
+    }
+    input:focus{
+      background: khaki;
+    }
+    button{
+      margin-top: 40px;
+      width: 50%;
+      padding: 10px;
+      background: green;
+      opacity: 0.4;
+      border: none;
+      border-radius: 8px;
+      color: white;
+    }
+
+    button:hover{
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <label>Id</label>
+    <input type="text" value=7 disabled='true'>
+    <label>Name</label>
+    <input type="text">
+    <label>Age</label>
+    <input type="text">
+    <button type="submit" onclick="addMembers()">Submit</button>
+  </div>
+  <script>
+    const addMembers = () => {
+      console.log("haii");
+    }
+  </script>
+</body>
+</html>
