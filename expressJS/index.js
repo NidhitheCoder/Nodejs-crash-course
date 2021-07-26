@@ -13,6 +13,10 @@ const app = express();
 // // Init middleware
 // app.use(logger);
 
+// Body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false })); // If we need to pass form then you can add it inside the object.
+
 // Set a static folder
 app.use(express.static(path.join(__dirname,'public')));
 
