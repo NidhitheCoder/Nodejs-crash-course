@@ -3,22 +3,22 @@ const members = [
   {
     id: 1,
     name: 'Jack',
-    age: 22
+    email: 'jack@gmail.com',
   },
   {
     id: 2,
     name: 'John',
-    age: 43
+    email: 'John@gmail.com',
   },
   {
     id: 3,
     name: 'Julia',
-    age: 54
+    email: 'Julia@gmail.com',
   },
   {
     id: 4,
     name: 'Jerry',
-    age: 34
+    email: 'Jerry@gmail.com',
   }
 ];
 
