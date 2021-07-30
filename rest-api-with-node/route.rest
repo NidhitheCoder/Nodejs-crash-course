@@ -1,8 +1,10 @@
 GET  http://localhost:8000/subscribers
 
+
 ###
 
 GET http://localhost:8000/subscribers/6103b84e87d3d23b38efbd3f
+
 
 ###
 
@@ -12,4 +14,18 @@ Content-Type: application/json
 {
   "name": "John",
   "subscriberToChannel": "Welcome channel"
+}
+
+
+###
+
+DELETE  http://localhost:8000/subscribers/6103bcb00fb9a63ec0745364
+
+
+###
+PATCH  http://localhost:8000/subscribers/6103b8a8bd41ec3bd3406c8d
+Content-Type: application/json
+
+{
+  "name": "Smith"
 }
