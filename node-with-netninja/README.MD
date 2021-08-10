@@ -13,3 +13,5 @@
 - Node has a massive community behind it.
 - Huge amount of third party packages and tools for help.
 
+### The Global Object
+- We can call functions or methods of a Global object directly inside the browser.
