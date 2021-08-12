@@ -15,3 +15,8 @@
 
 ### The Global Object
 - We can call functions or methods of a Global object directly inside the browser.
+
+### streams 
+- Start using data, before it has finished loading.
+- Small packets of data called as buffer.
+- read and write streams.
