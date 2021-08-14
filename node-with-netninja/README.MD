@@ -20,3 +20,11 @@
 - Start using data, before it has finished loading.
 - Small packets of data called as buffer.
 - read and write streams.
+
+### IP addresses
+- IP addresses are the unique address for every client/computer-system connected to the internet.
+
+### localhost
+- Local host is like a domain name on the web.
+- Localhost takes us to a very specific IP Address called loopback IP address.
+- A port number represents a specific channel gatway or port on our computer.
