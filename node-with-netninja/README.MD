@@ -28,3 +28,16 @@
 - Local host is like a domain name on the web.
 - Localhost takes us to a very specific IP Address called loopback IP address.
 - A port number represents a specific channel gatway or port on our computer.
+
+### Status Code
+- Status codes describe  the type of response sent to the browser.
+- eg:
+    200 - Ok.
+    301 - Resource removed.
+    404 - Not found.
+    500 - Internal server error.
+- 100 range - Informational responses.
+- 200 range - Success codes.
+- 300 range - Codes for redirects.
+- 400 range - User or client error codes.
+- 500 range - Server error codes.
