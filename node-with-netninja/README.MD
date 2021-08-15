@@ -41,3 +41,12 @@
 - 300 range - Codes for redirects.
 - 400 range - User or client error codes.
 - 500 range - Server error codes.
+
+## NPM(Node Package Manager)
+
+
+### Nodemon
+- Nodemon is a package which helps to create alive reload server.
+- How to install nodemon - `npm install -g nodemon` (-g indicates we install nodeman globally).
+- `npm init` helps to create package.json file.
+- package.json - file is keep track of our project dependencies.
