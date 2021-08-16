@@ -50,3 +50,6 @@
 - How to install nodemon - `npm install -g nodemon` (-g indicates we install nodeman globally).
 - `npm init` helps to create package.json file.
 - package.json - file is keep track of our project dependencies.
+
+### How to install express
+- npm install express
