@@ -7,18 +7,27 @@
   <title>About page</title>
   <style>
     body {
-      width: 100%;
+      width: 100vw;
       min-height: 100vh;
       display: flex;
+      overflow-x: hidden;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       color: yellow;
       background-image: linear-gradient(to bottom right,red,yellow);
     }
+
+    a {
+      color: yellow;
+    }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="/">Home page</a>
+    <a href="/about">About page</a>
+  </nav>
   <h2>About page</h2>
   <p> This is sample about page</p>
 </body>
