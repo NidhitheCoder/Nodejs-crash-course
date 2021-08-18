@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog view engine sample</title>
+  <title>Blog view engine sample | <%= title %></title>
 </head>
 <body>
+
+  <!-- <% const name="Mario" %> -->
   <nav>
     <div class="site-title">
+      <!-- <p><%= name %></p> -->
       <a href=""><h1>Blog sample</h1></a>
       <p>A sample site</p>
     </div>
@@ -20,6 +23,14 @@
   </nav>
   <div class="blogs content">
     <h1>All Blogs</h1>
+    <% if(blogs.length > 0) { %>
+      <% blogs.forEach(blog => { %>
+        <h3 class="title"><%= blog.title %><h3>
+        <p class="snippet"><%= blog.snippet %></p>
+      <% }) %>
+    <% } else { %>
+      <p>There are no blogs to display</p>
+    <% } %>
   </div>
 </body>
 </html>
