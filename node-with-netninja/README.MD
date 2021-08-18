@@ -53,3 +53,6 @@
 
 ### How to install express
 - npm install express
+
+## EJS
+- EJS or Embedded Javascript Templeting is a templating engine used by Node.js. Template engine helps to create an HTML template with minimal code. Also it can inject data into html template at the client side and produce the final HTML.
