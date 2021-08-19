@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     { title: "Blog 2", snippet: "Sample snippet 2" },
     { title: "Blog 3", snippet: "Sample snippet 3" },
     { title: "Blog 4", snippet: "Sample snippet 4" }
-  ]
+  ];
   res.render('index', { title: 'Home', blogs });
 });
 
