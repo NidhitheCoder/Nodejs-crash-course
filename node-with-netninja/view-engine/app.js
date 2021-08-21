@@ -11,6 +11,14 @@ app.set('view engine', 'ejs');
 // listen for requests
 app.listen(5000);
 
+// Middlewares
+app.use((req, res) => {
+  console.log("New request made");
+  console.log('Host ', req.hostname);
+  console.log('Path ', req.path);
+  console.log('method', req.method);
+})
+
 app.get('/', (req, res) => {
 
   const blogs = [
