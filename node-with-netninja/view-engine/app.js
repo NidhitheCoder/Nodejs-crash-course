@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 
 // express app
 const app = express();
@@ -10,6 +11,12 @@ app.set('view engine', 'ejs');
 
 // listen for requests
 app.listen(5000);
+
+// third party middleware.
+
+app.use(morgan('dev'));
+
+// app.use(morgan('tiny'));
 
 // Middlewares
 app.use((req, res, next) => {
@@ -24,6 +31,11 @@ app.use((req, res, next) => {
   console.log('In the next middleware.')
   next
 });
+
+
+// middleware with static files
+
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
 
