@@ -56,3 +56,17 @@
 
 ## EJS
 - EJS or Embedded Javascript Templeting is a templating engine used by Node.js. Template engine helps to create an HTML template with minimal code. Also it can inject data into html template at the client side and produce the final HTML.
+
+## Middleware
+- Code which runs(on the server) between getting a request  and sending a response.
+- Use method is generally used for middleware code.
+- We can create one or more middleware. And middleware runs top to bottom.
+
+### examples of middleware
+- Logger middleware to log details of every request.
+- Authontication check middleware for protected routes.
+- Middleware  to  parse JSON data from requests.
+- Return 404 pages
+
+### Using next()
+We have to explicitly tell that we can move to the next step.
