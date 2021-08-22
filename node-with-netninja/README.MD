@@ -67,3 +67,6 @@
 - Authontication check middleware for protected routes.
 - Middleware  to  parse JSON data from requests.
 - Return 404 pages
+
+### Using next()
+We have to explicitly tell that we can move to the next step.

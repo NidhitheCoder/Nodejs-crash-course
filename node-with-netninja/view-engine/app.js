@@ -12,12 +12,18 @@ app.set('view engine', 'ejs');
 app.listen(5000);
 
 // Middlewares
-app.use((req, res) => {
+app.use((req, res, next) => {
   console.log("New request made");
   console.log('Host ', req.hostname);
   console.log('Path ', req.path);
   console.log('method', req.method);
-})
+  next();
+});
+
+app.use((req, res, next) => {
+  console.log('In the next middleware.')
+  next
+});
 
 app.get('/', (req, res) => {
 
