@@ -70,3 +70,11 @@
 
 ### Using next()
 We have to explicitly tell that we can move to the next step.
+
+## Mongoose
+- Mongoose is an ODM library (Object Document Mapping Library).
+- Create schemas and models.
+- Schemas defines the structure of a type of data/document(Properties and property types).
+- Models allows us to  communicate with database collections.
+- How to install mongoose- npm install mongoose.
+- 

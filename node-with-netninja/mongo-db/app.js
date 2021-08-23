@@ -1,11 +1,16 @@
 const express = require('express');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
 
 // express app
 const app = express();
 
 // mongodb connections
-const dbURI = "mongodb cluster url";
+const dbURI = "mongodb+srv://admin:<password>@cluster0.xglsn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true});
+then((result) => console.log('Connected to database'))
+.catch((err) => console.log(err));
 
 // register view engine 
 app.set('view engine', 'ejs');
