@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const Blog = require('./models/blog');
 
 // express app
 const app = express();
@@ -23,6 +24,43 @@ app.set('view engine', 'ejs');
 // third party middleware.
 
 app.use(morgan('dev'));
+
+// mongoose and mongo sandbox routes
+app.get('/add-blog', (res, req) => {
+  const blog = new Blog({
+    title: 'Blog one',
+    snippet: 'This is blog one',
+    body: 'Blog one body'
+  });
+
+  blog.save()
+    .then((result) => {
+      res.setEncoding(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+app.get('/all-blogs', (req, res) => {
+  Blog.find()
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+app.get('/single-blog', (req, res) => {
+  Blog.findById('idstring')
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+})
 
 // app.use(morgan('tiny'));
 
