@@ -74,4 +74,31 @@ app.get('/api/courses/:id', (req, res) => {
 const port = process.env.PORT || 3000; // Assign custom assignable ports. 
 // To assign custom ports in terminal you can use keyword export(in windows = set). eg. export PORT=5001
 
-app.listen(port, () => console.log(`Listening the port ${port}...`))
+app.listen(port, () => console.log(`Listening the port ${port}...`));
+
+app.put('/api/courses', (req, res) => {
+    // Look up the course
+    // If not existing, return 404
+    const course = courses.find(course => course.id === parseInt(req.params.id));
+    if (!course) res.status(404).send('The course with the given course ID was not found.');
+
+
+    // Validate
+    // If invalid, return 400 - Bad request
+    const schema = {
+        name: Joi.string().min(3).required(),
+    };
+
+    const result = Joi.validate(req, body, schema);
+
+    if (result.error) {
+        res.status(400).send(result.error.details[0].message)
+        return
+    }
+
+    // Update course
+    course.name = req.body.name;
+
+    // Return the updated Course
+    res.send(course);
+})
