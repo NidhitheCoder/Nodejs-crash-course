@@ -1,2 +1,4 @@
-import * from './adminRoute';
-import * from './vendorRoute';
+import AdminRoute from "./adminRoute";
+import VendorRoute from "./vendorRoute";
+
+export { AdminRoute, VendorRoute };

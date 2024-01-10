@@ -1,5 +1,9 @@
-import express, { request, response, nextFunction } from "express";
+import express, { Request, Response, NextFunction } from "express";
 
-const router = express.Router();
+const VendorRoute = express.Router();
 
-export { router as vendorRoute };
+VendorRoute.get("/", (req: Request, res: Response, next: NextFunction) => {
+  res.json({ message: "Hello from Vendor route" });
+});
+
+export default VendorRoute;
