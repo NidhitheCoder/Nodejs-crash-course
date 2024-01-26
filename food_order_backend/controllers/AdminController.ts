@@ -6,9 +6,27 @@ export const createVender = async (
   res: Response,
   next: NextFunction
 ) => {
-  const { name, address, password, phone, email, foodType, ownerName } = <
-    CreateVendorInput
-  >req.body;
+  const {
+    address,
+    email,
+    foodType,
+    name,
+    ownerName,
+    password,
+    phone,
+    pinCode,
+  } = <CreateVendorInput>req.body;
+
+  return res.json({
+    name,
+    address,
+    email,
+    foodType,
+    ownerName,
+    password,
+    phone,
+    pinCode,
+  });
 };
 
 export const getVendor = async (
