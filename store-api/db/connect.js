@@ -1,3 +1,7 @@
-const connectionString = 'mongodb+srv://Nidheesh:<password>@store-api-cluster.9qs1u3p.mongodb.net/?retryWrites=true&w=majority&appName=Store-api-Cluster'
+const mongoose = require('mongoose');
 
-// mongodb+srv://Nidheesh:<password>@store-api-cluster.9qs1u3p.mongodb.net/
+const connectDB = (url) => {
+    return mongoose.connect(url)
+}
+
+module.exports = connectDB
