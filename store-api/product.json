@@ -16,5 +16,18 @@
         "price": 14000,
         "company": "Samsung",
         "productType": "Electronics"
+    },
+    {
+        "name": "VKC",
+        "price": 360,
+        "company": "VKC ltd",
+        "productType": "Scandals"
+    },
+    {
+        "name": "Sun TV",
+        "price": 14000,
+        "company": "Sun",
+        "productType": "Electronics",
+        "featured": true
     }
 ]
