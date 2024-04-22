@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Accent chair",
+        "price": 25,
+        "company": "lorem",
+        "productType": "Home Appliances"
+    },
+    {
+        "name": "LM Jeans",
+        "price": 360,
+        "company": "LM Clothes",
+        "productType": "Clothes"
+    },
+    {
+        "name": "Samsung TV",
+        "price": 14000,
+        "company": "Samsung",
+        "productType": "Electronics"
+    },
+    {
+        "name": "VKC",
+        "price": 360,
+        "company": "VKC ltd",
+        "productType": "Scandals"
+    },
+    {
+        "name": "Sun TV",
+        "price": 14000,
+        "company": "Sun",
+        "productType": "Electronics",
+        "featured": true
+    }
+]
