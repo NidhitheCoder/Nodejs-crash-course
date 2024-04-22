@@ -7,8 +7,16 @@ const getAllProductStatic = async (req, res) => {
 }
 
 const getAllProducts = async (req, res) => {
-    console.log(req.query)
-    const products = await Product.find(req.query);
+    console.log(req.query);
+    const { company, featured, search } = req.query;
+    const queryObject = {};
+
+    if (featured) queryObject.featured = featured === 'true';
+    if (company) queryObject.company = { $regex: company, $options: 'i' };
+    if (search) queryObject.name = { $regex: search, $options: 'i' };
+
+
+    const products = await Product.find(queryObject);
 
     res.status(200).json(products)
 }
