@@ -18,15 +18,18 @@ const getAllProducts = async (req, res) => {
     if (company) queryObject.company = { $regex: company, $options: 'i' };
     if (search) queryObject.name = { $regex: search, $options: 'i' };
 
-    const selectFieldsString = fields.toString().replace(',', ' ')
-    console.log(selectFieldsString)
-    let products = await Product.find(queryObject).select(selectFieldsString);
+
+    let products = await Product.find(queryObject);
 
     if (sort) {
-        products = products.sort(sort);
-    }
+        const sortList = sort.split(',').join(' ');
+        products = products.sort(sortList);
+    } else {
+        products = products.sort('createdAt');
+    }cl
 
-    res.status(200).json(products)
+
+    res.status(200).json({ products, nbHits: products.length })
 }
 
 module.exports = {
