@@ -19,15 +19,16 @@ const getAllProducts = async (req, res) => {
     if (search) queryObject.name = { $regex: search, $options: 'i' };
 
 
-    let products = await Product.find(queryObject);
+    let result = Product.find(queryObject);
 
     if (sort) {
-        const sortList = sort.split(',').join(' ');
-        products = products.sort(sortList);
+        const sortList = sort.split(',').join(' ').trim();
+        result = result.sort(sortList);
     } else {
-        products = products.sort('createdAt');
-    }cl
+        result = result.sort('createdAt');
+    }
 
+    const products = await result;
 
     res.status(200).json({ products, nbHits: products.length })
 }
