@@ -3,82 +3,95 @@
         "name": "Accent chair",
         "price": 25,
         "company": "lorem",
-        "productType": "Home Appliances"
+        "productType": "Home Appliances",
+        "rating": 2
     },
     {
         "name": "LM Jeans",
         "price": 360,
         "company": "LM Clothes",
-        "productType": "Clothes"
+        "productType": "Clothes",
+        "rating": 3
     },
     {
         "name": "Samsung TV",
         "price": 14000,
         "company": "Samsung",
-        "productType": "Electronics"
+        "productType": "Electronics",
+        "rating": 2
     },
     {
         "name": "VKC",
         "price": 360,
         "company": "VKC ltd",
-        "productType": "Scandals"
+        "productType": "Scandals",
+        "rating": 3.5
     },
     {
         "name": "Sun TV",
         "price": 14000,
         "company": "Sun",
         "productType": "Electronics",
-        "featured": true
+        "featured": true,
+        "rating": 1
     },
     {
         "name": "Reebok F1",
         "price": 1000,
         "company": "Reebok",
-        "productType": "Scandals"
+        "productType": "Scandals",
+        "rating": 5
     },
     {
         "name": "VKC Pro",
         "price": 450,
         "company": "VKC ltd",
-        "productType": "Scandals"
+        "productType": "Scandals",
+        "rating": 4.5
     },
     {
         "name": "LG TV",
         "price": 13000,
         "company": "LG",
         "productType": "Electronics",
-        "featured": true
+        "featured": true,
+        "rating": 5
     },
     {
         "name": "Hair TV",
         "price": 10000,
         "company": "Hair",
-        "productType": "Electronics"
+        "productType": "Electronics",
+        "rating": 2
     },
     {
         "name": "OTTO",
         "price": 360,
         "company": "OTTO",
-        "productType": "Clothes"
+        "productType": "Clothes",
+        "rating": 4
     },
     {
         "name": "Jockey",
         "price": 200,
         "company": "Jockey",
         "productType": "Clothes",
-        "featured": true
+        "featured": true,
+        "rating": 3
     },
     {
         "name": "POCCO",
         "price": 5600,
         "company": "POCCO",
-        "productType": "Electronics"
+        "productType": "Electronics",
+        "rating": 2
     },
     {
         "name": "Real Me",
         "price": 7000,
         "company": "Realme",
         "productType": "Electronics",
-        "featured": true
+        "featured": true,
+        "rating": 2.5
     }
 ]
