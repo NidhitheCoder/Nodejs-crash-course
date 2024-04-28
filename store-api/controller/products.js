@@ -10,7 +10,6 @@ const getAllProductStatic = async (req, res) => {
 }
 
 const getAllProducts = async (req, res) => {
-    console.log(req.query);
     const { company, featured, search, sort, fields } = req.query;
     const queryObject = {};
 
@@ -35,7 +34,7 @@ const getAllProducts = async (req, res) => {
     }
 
     const page = Number(req.query.page) || 1;
-    const limit = Number(req, query.limit) || 10;
+    const limit = Number(req.query.limit) || 10;
     const skip = (page - 1) * limit;
 
     result = result.skip(skip).limit(limit)
