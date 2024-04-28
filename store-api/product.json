@@ -29,5 +29,56 @@
         "company": "Sun",
         "productType": "Electronics",
         "featured": true
+    },
+    {
+        "name": "Reebok F1",
+        "price": 1000,
+        "company": "Reebok",
+        "productType": "Scandals"
+    },
+    {
+        "name": "VKC Pro",
+        "price": 450,
+        "company": "VKC ltd",
+        "productType": "Scandals"
+    },
+    {
+        "name": "LG TV",
+        "price": 13000,
+        "company": "LG",
+        "productType": "Electronics",
+        "featured": true
+    },
+    {
+        "name": "Hair TV",
+        "price": 10000,
+        "company": "Hair",
+        "productType": "Electronics"
+    },
+    {
+        "name": "OTTO",
+        "price": 360,
+        "company": "OTTO",
+        "productType": "Clothes"
+    },
+    {
+        "name": "Jockey",
+        "price": 200,
+        "company": "Jockey",
+        "productType": "Clothes",
+        "featured": true
+    },
+    {
+        "name": "POCCO",
+        "price": 5600,
+        "company": "POCCO",
+        "productType": "Electronics"
+    },
+    {
+        "name": "Real Me",
+        "price": 7000,
+        "company": "Realme",
+        "productType": "Electronics",
+        "featured": true
     }
 ]
