@@ -7,4 +7,4 @@
 - Rest client extension helps to call REST API directly from VS code editor.
 
 ###
-- middleware funciton helps to identify subscriber. Middleware function helps to reduce line of codes.
+- Middleware function helps to identify subscriber. Middleware function helps to reduce line of codes.
