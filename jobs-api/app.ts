@@ -1,13 +1,30 @@
-import { Unauthenticated } from "./errors";
+import dotenv from "dotenv";
+import express from "express";
 
-const express = require("express");
+import notFoundMiddleware from "./middlewares/not-found";
+import errorHandlerMiddleware from "./middlewares/error-handler";
+
+dotenv.config();
 
 const app = express();
 
-app.get("/welcome", (req: any, res: any) => {
-  res.status(200).send({ msg: "welcome" });
-});
+app.use(express.json());
 
-app.listen(3000, () => {
-  console.log("listening port 3000");
-});
+
+// Error handler
+app.use(notFoundMiddleware);
+app.use(errorHandlerMiddleware);
+
+// Routers
+
+const port = process.env.PORT || 3000;
+
+const start = async () => {
+  try {
+    app.listen(port, () => console.log(`Server listening Port ${port}`));
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+start();
