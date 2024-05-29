@@ -1,4 +1,5 @@
 const register = (req: any, res: any) => {
+    console.log('sample')
   res.send("Register user");
 };
 
