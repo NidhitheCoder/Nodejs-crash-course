@@ -5,6 +5,7 @@ import notFoundMiddleware from "./middlewares/not-found";
 import errorHandlerMiddleware from "./middlewares/error-handler";
 import authRoute from "./routes/auth";
 import jobsRoute from "./routes/jobs";
+import connectDB from "./connect/db";
 
 dotenv.config();
 
@@ -23,6 +24,8 @@ app.use(errorHandlerMiddleware);
 const port = process.env.PORT || 3000;
 
 const start = async () => {
+  // Connect with DB
+  await connectDB(process.env.MONGO_URI || "");
   try {
     app.listen(port, () => console.log(`Server listening Port ${port}`));
   } catch (error) {
