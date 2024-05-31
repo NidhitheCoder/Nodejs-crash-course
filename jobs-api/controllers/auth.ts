@@ -13,7 +13,9 @@ const register = async (req: any, res: any, next: NextFunction) => {
     // }
 
     const user = await User.create(req.body);
-    res.status(StatusCodes.CREATED).json({ user });
+    const token = user.createJWT();
+
+    res.status(StatusCodes.CREATED).json({ user: { name: user.name }, token });
   } catch (err) {
     next(err);
   }
