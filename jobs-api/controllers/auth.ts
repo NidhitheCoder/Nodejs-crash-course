@@ -1,5 +1,4 @@
 import { StatusCodes } from "http-status-codes";
-import bcryptjs from "bcryptjs";
 
 import User from "../models/user";
 // import { BadRequestError } from "../errors";
@@ -13,12 +12,7 @@ const register = async (req: any, res: any, next: NextFunction) => {
     //   throw new BadRequestError("Please provide name, email and password.");
     // }
 
-    const { name, email, password } = req.body; 
-    const salt = await bcryptjs.genSalt(10);
-    const hashedPassword = await bcryptjs.hash(password, salt);
-    const tempUser = { name, email, password: hashedPassword };
-
-    const user = await User.create(tempUser);
+    const user = await User.create(req.body);
     res.status(StatusCodes.CREATED).json({ user });
   } catch (err) {
     next(err);
