@@ -7,7 +7,7 @@ const getJob = (req: any, res: any) => {
 };
 
 const createJob = (req: any, res: any) => {
-  res.send("Create job");
+  res.json(req.user);
 };
 
 const updateJob = (req: any, res: any) => {

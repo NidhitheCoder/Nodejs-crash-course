@@ -7,6 +7,7 @@ export interface UserDoc extends mongoose.Document {
   email: string;
   password: string;
   createJWT: () => String;
+  comparePassword: (password: string) => string;
 }
 
 const UserSchema = new mongoose.Schema({
@@ -36,13 +37,19 @@ UserSchema.pre("save", async function () {
 
 UserSchema.methods.createJWT = function () {
   const token = jwt.sign(
-    { id: this._id, name: this.name },
+    { userId: this._id, name: this.name },
     process.env.JWT_SECRET || "jwtSecret",
     {
       expiresIn: process.env.JWT_LIFETIME,
     }
   );
   return token;
+};
+
+UserSchema.methods.comparePassword = function (candidatePassword: string) {
+  const isMatch = bcrypt.compare(candidatePassword, this.password);
+
+  return isMatch;
 };
 
 const User = mongoose.model<UserDoc>("User", UserSchema);
