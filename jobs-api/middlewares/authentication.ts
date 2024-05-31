@@ -12,9 +12,11 @@ const auth = (req: any, res: any, next: NextFunction) => {
   const token = authHeader.split(" ")[1];
 
   try {
-    const payload: any = JWT.verify(token, process.env.JWT_SECRET || "jwtSecret");
-    console.log(payload)
-    req.user = { id: payload.userId, name: payload.name };
+    const payload: any = JWT.verify(
+      token,
+      process.env.JWT_SECRET || "jwtSecret"
+    );
+    req.user = { userId: payload.userId, name: payload.name };
     next();
   } catch (err) {
     throw new Unauthenticated("Authentication invalid");
