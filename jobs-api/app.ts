@@ -3,6 +3,7 @@ import express from "express";
 
 import notFoundMiddleware from "./middlewares/not-found";
 import errorHandlerMiddleware from "./middlewares/error-handler";
+import authenticatedUser from "./middlewares/authentication";
 import authRoute from "./routes/auth";
 import jobsRoute from "./routes/jobs";
 import connectDB from "./connect/db";
@@ -15,7 +16,7 @@ app.use(express.json());
 
 // Routes
 app.use("/api/v1/auth", authRoute);
-app.use("/api/v1/jobs", jobsRoute);
+app.use("/api/v1/jobs", authenticatedUser, jobsRoute);
 
 // Error handler
 app.use(notFoundMiddleware);
