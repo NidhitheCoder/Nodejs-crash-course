@@ -1,6 +1,6 @@
 import { StatusCodes } from "http-status-codes";
 import Job from "../models/jobs";
-import { NotFoundError } from "../errors";
+import { BadRequestError, NotFoundError } from "../errors";
 
 const getAllJobs = async (req: any, res: any) => {
   const jobs = await Job.find({ createdBy: req.user.userId }).sort("createdBy");
@@ -30,8 +30,28 @@ const createJob = async (req: any, res: any) => {
   res.status(StatusCodes.CREATED).json(job);
 };
 
-const updateJob = (req: any, res: any) => {
-  res.send("Update job");
+const updateJob = async (req: any, res: any) => {
+  const {
+    body: { company, position },
+    user: { userId },
+    params: { id: jobId },
+  } = req;
+
+  if (!company || !position) {
+    throw new BadRequestError("Company or position field cannot be empty");
+  }
+
+  const job = await Job.findByIdAndUpdate(
+    { _id: jobId, createdBy: userId },
+    { company, position },
+    { new: true, runValidators: true }
+  );
+
+  if (!job) {
+    throw new NotFoundError(`No job with job id ${jobId}`);
+  }
+
+  res.status(StatusCodes.OK).json(job);
 };
 
 const deleteJob = (req: any, res: any) => {
