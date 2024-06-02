@@ -1,4 +1,3 @@
-import { CustomAPIError } from "../errors";
 import { StatusCodes } from "http-status-codes";
 
 const errorHandlerMiddleware = (err: any, req: any, res: any, next: any) => {
@@ -15,7 +14,6 @@ const errorHandlerMiddleware = (err: any, req: any, res: any, next: any) => {
   }
 
   if (err.name === "CastError") {
-    console.log(err.value);
     customError.msg = `No item found with id: ${err.value._id}`;
     customError.statusCode = StatusCodes.BAD_REQUEST;
   }
