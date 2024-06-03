@@ -29,6 +29,9 @@ app.use(cors());
 app.use(xss());
 
 // Routes
+app.get("/ping", (req, res) => {
+  res.send("Ping is successful");
+});
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/jobs", authenticatedUser, jobsRoute);
 
