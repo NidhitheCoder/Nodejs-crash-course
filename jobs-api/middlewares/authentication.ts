@@ -5,7 +5,7 @@ import { Unauthenticated } from "../errors";
 const auth = (req: any, res: any, next: NextFunction) => {
   const authHeader = req.headers.authorization;
 
-  if (!authHeader && authHeader.startsWith("Bearer")) {
+  if (!authHeader || authHeader?.startsWith("Bearer")) {
     throw new Unauthenticated("Authentication invalid");
   }
 
