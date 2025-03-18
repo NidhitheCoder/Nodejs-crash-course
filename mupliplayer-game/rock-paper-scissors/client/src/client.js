@@ -1,3 +1,4 @@
+const sock = io();
 const writeMessage = (text) => {
     const contentDiv = document.querySelector('.content')
     const messagePara = document.createElement('p');
@@ -6,4 +7,4 @@ const writeMessage = (text) => {
     contentDiv.appendChild(messagePara)
 }
 
-writeMessage("Welcome to RPS world!")
+sock.on('message', writeMessage)

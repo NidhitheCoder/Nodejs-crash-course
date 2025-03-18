@@ -10,6 +10,7 @@ const server = http.createServer(app)
 const io = socketIO(server)
 
 io.on('connection', (socket) => {
+    console.log('someone connected')
     socket.emit('message', 'Hi You are connected successfully')
 })
 
