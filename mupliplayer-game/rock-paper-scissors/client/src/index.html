@@ -8,17 +8,19 @@
   <body>
     <div class="rps-wrapper">
       <h1>Welcome to Rock paper scissors</h1>
-      <div class="content">
-      </div>
+      <div class="content"></div>
       <div class="buttons-wrapper">
-        <input type="text" id="chat" />
+        <form id="chat-form">
+          <input type="text" id="chat" />
+          <button id="say">Say it</button>
+        </form>
         <button id="rock">Rock</button>
         <button id="paper">Paper</button>
         <button id="scissors">Scissors</button>
-        <button id="say">Say it</button>
       </div>
     </div>
-    <script src="socket.io/socket.io.js"></script>
+    <!-- / means root of the server  -->
+    <script src="/socket.io/socket.io.js"></script>
     <script src="client.js"></script>
   </body>
 </html>
