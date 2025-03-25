@@ -12,6 +12,10 @@ const io = socketIO(server)
 io.on('connection', (socket) => {
     console.log('someone connected')
     socket.emit('message', 'Hi You are connected successfully')
+
+    socket.on('message', text => {
+        io.emit('message', text)
+    })
 })
 
 server.on('error', (err) => {
